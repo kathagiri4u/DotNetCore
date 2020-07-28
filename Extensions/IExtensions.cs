@@ -4,7 +4,6 @@ namespace Extensions
 {
     public static class IExtensions 
     {
-
         public static string ToProper(this String oldString)
         {
              if(oldString.Length>0)
