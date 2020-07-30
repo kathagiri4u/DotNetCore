@@ -69,6 +69,28 @@ namespace Linq
 
             Student.GroupBySingleProperty();
 
+            FileLogger file = new FileLogger("/Users/giridharreddykatha/Documents/Logs/log.txt");
+            Logger.LogMessage(Severity.Error, "This is Error", "This Error is caused");
+
+            Logger.LogMessage(Severity.Critical, "This is Critical Error", "Big  Error");
+
+
+            AddDelegate ad = new AddDelegate(DelegateDemo.Add);
+            ad.Invoke(10,20);
+
+
+           MulDelegate md = MulticastDelegate.Area;
+           md += MulticastDelegate.Circumference;
+
+           md.Invoke(10.2,12);
+
+           GreetingDelegate gd = delegate(string name)
+           {
+               return "Hello "  + name + " A Very Good Morning!!";
+           };
+
+           Console.WriteLine(gd.Invoke("Friend") );
+
         }
     }
 }
