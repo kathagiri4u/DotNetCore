@@ -91,6 +91,10 @@ namespace Linq
 
            Console.WriteLine(gd.Invoke("Friend") );
 
+           GreetingDelegate g = (name) => {return "Hello "  + name + " A Very Good Morning!!";} ;
+
+           Console.WriteLine( g.Invoke("Mike"));
+
         }
     }
 }
