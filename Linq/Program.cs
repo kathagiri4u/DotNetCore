@@ -95,6 +95,8 @@ namespace Linq
 
            Console.WriteLine( g.Invoke("Mike"));
 
+           Console.ReadLine();
+
         }
     }
 }
